@@ -39,15 +39,25 @@
 ![capture1](https://user-images.githubusercontent.com/45460095/49273538-e1cfae00-f4a7-11e8-9a2e-d311eace142c.PNG)
 
 private void jb1ActionPerformed(java.awt.event.ActionEvent evt) {                                    
+        
         try {
+            
             Random rd = new Random();
+            
             int a = (int) (rd.nextInt(6) + 1);
+            
             int b = (int) (rd.nextInt(6) + 1);
+            
             int n1 = a + b;
+            
             System.out.println(a + "+" + b + "=" + n1);
+            
             jlb3.setText(Integer.toString(n1));
+            
             jLabel1.setText(Integer.toString(a));
+            
             jLabel2.setText(Integer.toString(b));
+            
             if (n1 <= 6) {
                 System.out.println("ต่ำ");
                 jLabel4.setText("LOW (ต่ำ)");
