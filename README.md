@@ -125,5 +125,3 @@ private void jb1ActionPerformed(java.awt.event.ActionEvent evt) {
         dpp = 0;
         ans = ans;
 
-# สำหรับรุปนี้เกี่ยวกับการทำงานของรูปเต๋า (การใช้โค้ด)
-
