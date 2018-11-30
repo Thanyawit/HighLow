@@ -38,6 +38,65 @@
 
 ![capture1](https://user-images.githubusercontent.com/45460095/49273538-e1cfae00-f4a7-11e8-9a2e-d311eace142c.PNG)
 
+private void jb1ActionPerformed(java.awt.event.ActionEvent evt) {                                    
+        try {
+            Random rd = new Random();
+            int a = (int) (rd.nextInt(6) + 1);
+            int b = (int) (rd.nextInt(6) + 1);
+            int n1 = a + b;
+            System.out.println(a + "+" + b + "=" + n1);
+            jlb3.setText(Integer.toString(n1));
+            jLabel1.setText(Integer.toString(a));
+            jLabel2.setText(Integer.toString(b));
+            if (n1 <= 6) {
+                System.out.println("ต่ำ");
+                jLabel4.setText("LOW (ต่ำ)");
+            } else {
+                System.out.println("สูง");
+                jLabel4.setText("HIGH (สูง)");
+
+            }
+            if (input == 1 && n1 > 6) {
+                System.out.println("ออกสูงชนะ");
+                w = 1;
+            } else if (input == 1 && n1 <= 6) {
+                System.out.println("ออกต่ำแพ้");
+                L = 1;
+
+            }
+            if (input == 2 && n1 <= 6) {
+                System.out.println("ออกต่ำชนะ");
+                w = 1;
+            } else if (input == 2 && n1 > 6) {
+                System.out.println("ออกสูงแพ้");
+                L = 1;
+            }
+
+            if (dpp == 1 && w == 1) {
+                ans = ans + dp;
+            } else if (dpp == 1 && L == 1) {
+                ans = ans - dp;
+            }
+            if (dpp == 2 && w == 1) {
+                ans = ans + dp1;
+            } else if (dpp == 2 && L == 1) {
+                ans = ans - dp1;
+            }
+            if (dpp == 3 && w == 1) {
+                ans = ans + dp2;
+            } else if (dpp == 3 && L == 1) {
+                ans = ans - dp2;
+            }
+            if (ans <= 0) {
+                JOptionPane.showMessageDialog(rootPane, "GAME OVER");
+                System.exit(0);
+
+            }
+            money1.setText(Integer.toString(ans));
+        } catch (HeadlessException e) {
+        }
+    }
+
 
     
 สำหรับรูปนี้คือการ Cleak (การใช้โค้ด)
